@@ -51,6 +51,9 @@ body {
     height: 400px;
 }
 
+.chart {
+    border: 1px solid black;
+}
 .time {
     display: inline-block;
     width: 90px;
