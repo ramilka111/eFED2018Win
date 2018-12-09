@@ -2,120 +2,116 @@
 <html lang='ru'>
     <head>
         <meta charset="UTF-8">
-        <title>Five-day weather forecast</title>
+        <title>Прогноз погоды на сегодня</title>
         <meta name="author" content="Ramil Shakirov">
         <meta name="keywords" content="weather, 5-day weather, Izhevsk, wind speed, humidity, temperature, current weather">
         <meta name="description" content="Today's weather forecast">
         <link rel="stylesheet" type='text/css' href="styles/main.css">
     </head>
     <body>
-        <div class='wrap'>
+        <header class='wrap'>
             <nav class='navigation'>
-                <input type='button' class='btn' value='Сегодня'>
-                <input type='button' class='btn' value='5 дней'>
-                <input type='button' class='btn' value='История погоды'>
+                <input type='button' class='btn' value='Сегодня' onclick="location.href='weather-details.html'">
+                <input type='button' class='btn' value='5 дней' onclick="location.href='index.html'">
+                <input type='button' class='btn' value='История погоды' onclick="location.href='historical-review.html'">
             </nav>
-            <div class='search_string'>   
+            <section class='search_string'>
                 <span class="pollution">
                     Загрязнение воздуха: 8.16836
                 </span>
-                <form class="search" action="#" method="post">
-                    <div>
-                        <input type="search" placeholder="Поиск" role="search">
-                    </div>
-                </form>
-            </div>
-            <div class='content'>
-                <div class='left-block'>
-                    <div class='city'>
-                        Ижевск, Россия 
-                    </div>
-                    <div class='day-of-week'>
-                        Среда
-                    </div>
-                    <div class='weather'>
-                        Облачно
-                    </div>
-                    <img class='current-weather-img' src="assets/Cloudy%20Weather.png" alt="Облачная погода">
-                    <div class="current_t">
-                        22 &deg;C
-                    </div>
-                </div>
-                <div class='right-block'>
-                    <div class='probability-precip'>
-                        Вероятность осадков: 20%
-                    </div>
-                    <div class='humidity'>
-                        Влажность: 45% 
-                    </div>
-                    <div class='wnd-spd'>
-                        Ветер: 11км/ч
-                    </div>
-                    <div class='inner-navigation'>
-                        <input type="button" class='btn' value="Температура">
-                        <input type="button" class='btn' value="Вероятность осадков">
-                        <input type="button" class='btn' value="Ветер">
-                    </div>
-                </div>
-                <div class='chart'>
-                    <img src="assets/Group_5.png" alt="График температур">
-                </div>
-                <div class="every-day-weather">
-                    <div class="times">
-                        <div class="time">17:00</div>
-                        <div class="time">20:00</div>
-                        <div class="time">23:00</div>
-                        <div class="time">02:00</div>
-                        <div class="time">05:00</div>
-                        <div class="time">08:00</div>
-                        <div class="time">11:00</div>
-                        <div class="time">14:00</div>
-                    </div>
-                    <div class="week-info">
-                        <div class="day">
-                            <div class="day-of-week">пн</div>
-                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                            <div class="temp-range">24&deg; 10&deg;</div>
-                        </div>
-                        <div class="day">
-                            <div class="day-of-week">вт</div>
-                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                            <div class="temp-range">24&deg; 10&deg;</div>
-                        </div>
-                        <div class="day">
-                            <div class="day-of-week">ср</div>
-                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                            <div class="temp-range">24&deg; 10&deg;</div>
-                        </div>
-                        <div class="day">
-                            <div class="day-of-week">чт</div>
-                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                            <div class="temp-range">24&deg; 10&deg;</div>
-                        </div>
-                        <div class="day">
-                            <div class="day-of-week">пт</div>
-                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                            <div class="temp-range">24&deg; 10&deg;</div>
-                        </div>
-                        <div class="day">
-                            <div class="day-of-week">сб</div>
-                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                            <div class="temp-range">24&deg; 10&deg;</div>
-                        </div>
-                        <div class="day">
-                            <div class="day-of-week">вс</div>
-                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                            <div class="temp-range">24&deg; 10&deg;</div>
-                        </div>
-                        <div class="day">
-                            <div class="day-of-week">пн</div>
-                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                            <div class="temp-range">24&deg; 10&deg;</div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
+                <input class='search' type="search" placeholder="Поиск" role="search" pattern="[A-ZА-ЯЁ][A-Za-zА-Яа-яЁё]{1,}">
+            </section>
+        </header>
+        <main class='content'>
+            <section class='left-block'>
+                <span class='city'>
+                    Ижевск, Россия
+                </span><br>
+                <span class='day-of-week'>
+                    Среда
+                </span><br>
+                <span class='weather'>
+                    Облачно
+                </span><br>
+                <img class='current-weather-img' src="assets/Cloudy%20Weather.png" alt="Облачная погода">
+                <span class="current_t">
+                    22 &deg;C
+                </span>
+            </section>
+            <section class='right-block'>
+                <span class='probability-precip'>
+                    Вероятность осадков: 20%
+                </span> <br>
+                <span class='humidity'>
+                    Влажность: 45%
+                </span><br>
+                <span class='wnd-spd'>
+                    Ветер: 11км/ч
+                </span><br>
+                <nav class='inner-navigation'>
+                    <input type="button" class='btn' value="Температура">
+                    <input type="button" class='btn' value="Вероятность осадков">
+                    <input type="button" class='btn' value="Ветер">
+                </nav>
+            </section>
+            <figure class='chart'>
+                <img src="assets/Group_5.png" alt="График температур">
+            </figure>
+            <section class="every-day-weather">
+                <span class="times">
+                    <time class="time">17:00</time>
+                    <time class="time">20:00</time>
+                    <time class="time">23:00</time>
+                    <time class="time">02:00</time>
+                    <time class="time">05:00</time>
+                    <time class="time">08:00</time>
+                    <time class="time">11:00</time>
+                    <time class="time">14:00</time>
+                </span>
+                <section class="week-info">
+                    <section class="day">
+                        <p class="day-of-week">пн</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-range">24&deg; 10&deg;</p>
+                    </section>
+                    <section class="day">
+                        <p class="day-of-week">вт</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p  class="temp-range">24&deg; 10&deg;</p>
+                    </section>
+                    <section class="day">
+                        <p class="day-of-week">ср</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-range">24&deg; 10&deg;</p>
+                    </section>
+                    <section class="day">
+                        <p class="day-of-week">чт</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-range">24&deg; 10&deg;</p>
+                    </section>
+                    <section class="day">
+                        <p class="day-of-week">пт</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-range">24&deg; 10&deg;</p>
+                    </section>
+                    <section class="day">
+                        <p class="day-of-week">сб</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-range">24&deg; 10&deg;</p>
+                    </section>
+                    <section class="day">
+                        <p class="day-of-week">вс</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-range">24&deg; 10&deg;</p>
+                    </section>
+                    <section class="day">
+                        <p class="day-of-week">пн</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-range">24&deg; 10&deg;</p>
+                    </section>
+                </section>
+            </section>
+        </main>
         <footer>
             2018 &copy; Copyright
         </footer>
