@@ -3,7 +3,7 @@ body {
     font-family: Arial, serif;
 }
 
-.wrap {
+.header {
     width: 798px;
     border: 1px solid black;
 }
@@ -24,7 +24,7 @@ body {
 }
 .search {
     float: right;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #e4e4e4;
 }
 
