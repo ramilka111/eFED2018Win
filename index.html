@@ -1,16 +1,206 @@
 <!DOCTYPE html>
 <html lang='ru'>
-  <head>
-    <meta charset="UTF-8">
-    <title>Five-day weather forecast</title>
-    <script type="text/javascript" src="mocks/FullWeatherDetailsMock.js"></script>
-    <script type="text/javascript" src="mocks/HistoricalReviewMock.js"></script>
-    <script type="text/javascript" src="mocks/WeekForecastMock.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-  </head>
-  <body>
-    <h1>Пятидневный прогноз погоды</h1>
-    <div id="mainInfo">
-  </body>
-
+    <head>
+        <meta charset="UTF-8">
+        <title>Прогноз погоды на сегодня</title>
+        <meta name="author" content="Ramil Shakirov">
+        <meta name="keywords" content="weather, 5-day weather, Izhevsk, wind speed, humidity, temperature, current weather">
+        <meta name="description" content="Today's weather forecast">
+        <link rel="stylesheet" type='text/css' href="styles/main.css">
+        <link rel="stylesheet" type='text/css' href="styles/index.css">
+    </head>
+    <body>
+    <header class='header'>
+        <nav class='navigation'>
+            <input type='button' class='btn' value='Сегодня' onclick="location.href='weather-details.html'">
+            <input type='button' class='btn' value='5 дней' onclick="location.href='index.html'">
+            <input type='button' class='btn' value='История погоды' onclick="location.href='historical-review.html'">
+        </nav>
+        <section class='search_string'>
+            <img class="city-img" src="assets/assets%2036px/cloud.png" alt="Облачно">
+            <span class="city">
+                34&deg; Ижевск, Россия
+            </span>
+            <input class='search' type="search" placeholder="Поиск" role="search" pattern="[A-ZА-ЯЁ][A-Za-zА-Яа-яЁё]{1,}">
+        </section>
+    </header>
+    <main class="content">
+        <nav class="left-arrow">
+            <a href="#"><img class="arrow" src="assets/left_arrow.jpg" alt="Левая стрелка"></a>
+        </nav>
+        <section class="table">
+            <section class="five-days-table">
+                <p class="date">Пт, 18 мая</p>
+                <p class="date">Сб, 19 мая</p>
+                <p class="date">Вс, 20 мая</p>
+                <p class="date">Пн, 21 мая</p>
+                <p class="date">Вт, 22 мая</p>
+            </section>
+            <section class="five-days-table">
+                <section class="date">
+                    <article class="day-time">
+                        <p>Ночь</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-cold">+5 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>Утро</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-normal">+15 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>День</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-heat">+20 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>Вечер</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-normal">+12 </p>
+                    </article>
+                </section>
+                <section class="date">
+                    <article class="day-time">
+                        <p>Ночь</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-cold">+5 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>Утро</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-normal">+15 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>День</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-heat">+20 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>Вечер</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-normal">+12 </p>
+                    </article>
+                </section>
+                <section class="date">
+                    <article class="day-time">
+                        <p>Ночь</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-cold">+5 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>Утро</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-normal">+15 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>День</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-heat">+20 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>Вечер</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-normal">+12 </p>
+                    </article>
+                </section>
+                <section class="date">
+                    <article class="day-time">
+                        <p>Ночь</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-cold">+5 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>Утро</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-normal">+15 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>День</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-heat">+20 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>Вечер</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-normal">+12 </p>
+                    </article>
+                </section>
+                <section class="date">
+                    <article class="day-time">
+                        <p>Ночь</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-cold">+5 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>Утро</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-normal">+15 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>День</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-heat">+20 </p>
+                    </article>
+                    <article class="day-time">
+                        <p>Вечер</p>
+                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                        <p class="temp-color-normal">+12 </p>
+                    </article>
+                </section>
+            </section>
+            <section class="five-days-table wnd-spd-row" >
+                <span class="wnd-spd-row">Максимальная скорость ветра, м/с</span>
+            </section>
+            <section class="five-days-table">
+                <article class="date">
+                    <p class="wnd-spd-block">2</p>
+                    <p class="wnd-spd-block">5</p>
+                    <p class="wnd-spd-block">4</p>
+                    <p class="wnd-spd-block">5</p>
+                </article>
+                <article class="date">
+                    <p class="wnd-spd-block">2</p>
+                    <p class="wnd-spd-block">5</p>
+                    <p class="wnd-spd-block">4</p>
+                    <p class="wnd-spd-block">5</p>
+                </article>
+                <article class="date">
+                    <p class="wnd-spd-block">2</p>
+                    <p class="wnd-spd-block">5</p>
+                    <p class="wnd-spd-block">4</p>
+                    <p class="wnd-spd-block">5</p>
+                </article>
+                <article class="date">
+                    <p class="wnd-spd-block">2</p>
+                    <p class="wnd-spd-block">5</p>
+                    <p class="wnd-spd-block">4</p>
+                    <p class="wnd-spd-block">5</p>
+                </article>
+                <article class="date">
+                    <p class="wnd-spd-block">2</p>
+                    <p class="wnd-spd-block">5</p>
+                    <p class="wnd-spd-block">4</p>
+                    <p class="wnd-spd-block">5</p>
+                </article>
+            </section>
+            <section class="five-days-table wnd-spd-row" >
+                <span class="wnd-spd-row">Осадки, мм</span>
+            </section>
+            <section class="five-days-table">
+                <article class="date">
+                    <p class="precip-value">0</p>
+                    <p class="precip-value">0</p>
+                    <p class="precip-value precip-value-low">2.2</p>
+                    <p class="precip-value precip-value-high">4.6</p>
+                </article>
+            </section>
+        </section>
+        <nav class="right-arrow">
+            <a href="#"><img class="arrow" src="assets/right_arrow.jpg" alt="Левая стрелка"></a>
+        </nav>
+    </main>
+    <footer>
+        2018 &copy; Copyright
+    </footer>
+    </body>
 </html>
