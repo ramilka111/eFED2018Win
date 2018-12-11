@@ -13,11 +13,14 @@
     width: 50px;
 }
 .content {
-    height: 450px;
+    height: 550px;
 
 }
 .table {
     margin-top: 10px;
+    display: inline-block;
+    width: 674px;
+
 }
 .five-days-table {
     display: inline-block;
@@ -71,7 +74,7 @@ p.date {
     border-top: none;
     padding: 5px;
     background-color: #d8d8d8;
-    width: 662px;
+    width: 661px;
 }
 .wnd-spd-block {
     margin: 0;
@@ -85,9 +88,43 @@ p.date {
     width: 22%;
     padding-top: 75px;
 }
-.precip-value-high {
-    background-image: url('assets/assets_5 days_2018-06-14/Group.png');
+.sun-moon {
+    border: 1px solid black;
+    clear: both;
+    margin-top: 5px;
+    width: 672px;
 }
-.precip-value-low {
-    background-image: url('/assets/assets_5 days_2018-06-14/group.png');
+.today {
+    float: left;
+    margin-left: 5px;
+    padding: 10px;
+}
+.sun-and-moon {
+    float: left;
+    margin-left: 55px;
+    padding: 10px;
+}
+.sun {
+    display: inline-block;
+    width: 50%;
+}
+.sun>img {
+    float: left;
+    margin-top: 1em;
+    margin-right: 10px;
+}
+.moon {
+    float: right;
+    width: 50%;
+}
+.moon>img {
+    float: left;
+    margin-top: 1em;
+    margin-right: 10px;
+}
+.sunrise {
+    margin: 47px 0;
+}
+.moonrise {
+    margin: 47px 0;
 }

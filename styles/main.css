@@ -34,11 +34,12 @@ body {
 .left-block {
     display: inline-block;
     height: 150px;
+    margin-left: 20px;
 }
 
 .current_t {
-    display: inline-block;
-    float: right;
+    line-height: 0;
+    font-size: 20px;
     
 }
 
@@ -50,7 +51,7 @@ body {
 }
 
 .inner-navigation {
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
 .content {    
@@ -61,6 +62,7 @@ body {
 
 .chart {
     border: 1px solid black;
+    margin: auto 0;
 }
 
 .time {
@@ -96,15 +98,35 @@ footer{
 }
 
 .probability-precip {
-
+    font-size: 20px;
+    padding: 5px;
+    line-height: 1.5em;
 }
 
 .humidity {
-
+    font-size: 20px;
+    padding: 5px;
+    line-height: 1.5em;
+}
+.wnd-spd {
+    font-size: 20px;
+    padding: 5px;
+    line-height: 1.5em;
 }
 .city {
-
+    font-size: 20px;
+    padding: 5px;
+    line-height: 1.5em;
 }
-
+.day-week {
+    font-size: 20px;
+    padding: 5px;
+    line-height: 1.5em;
+}
+.weather {
+    font-size: 20px;
+    padding: 5px;
+    line-height: 1.5em;
+}
 
 
