@@ -1,10 +1,109 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang='ru'>
+<head>
     <meta charset="UTF-8">
-    <title>Five-day weather forecast</title>
-  </head>
-  <body>
-    <h1>Историческая справка о погоде на текущий день</h1>
-  </body>
+    <title>Историческая справка о погоде на текущий день</title>
+    <meta name="author" content="Ramil Shakirov">
+    <meta name="keywords" content="weather, 5-day weather, Izhevsk, wind speed, humidity, temperature, current weather">
+    <meta name="description" content="Today's weather forecast">
+    <link rel="stylesheet" type='text/css' href="styles/main.css">
+    <link rel="stylesheet" type='text/css' href="styles/historical%20reviews%20styles.css">
+</head>
+<body>
+<header class='header'>
+    <nav class='navigation'>
+        <a href="weather-details.html"><input type='button' class='btn' value='Сегодня'></a>
+        <a href="index.html"><input type='button' class='btn' value='5 дней'></a>
+        <a href="historical-review.html"><input type='button' class='btn' value='История погоды'></a>
+    </nav>
+    <section class='search_string'>
+                <span class='city'>
+                    Ижевск, Россия
+                </span>
+        <input class='search' type="search" placeholder="Поиск" role="search" pattern="[A-ZА-ЯЁ][A-Za-zА-Яа-яЁё]{1,}">
+    </section>
+</header>
+<main class='content'>
+    <section class="wrap">
+        <section class="odd-row">
+            <p class="cell"></p>
+            <p class="cell">Январь</p>
+            <p class="cell">Февраль</p>
+            <p class="cell">Март</p>
+            <p class="cell">Апрель</p>
+            <p class="cell">Май</p>
+            <p class="cell">Июнь</p>
+            <p class="cell">Июль</p>
+            <p class="cell">Август</p>
+            <p class="cell">Сентябрь</p>
+            <p class="cell">Октябрь</p>
+            <p class="cell">Ноябрь</p>
+            <p class="cell">Декабрь</p>
+        </section>
+        <section class="even-row">
+            <p class="cell">Средний максимум</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+        </section>
+        <section class="odd-row">
+            <p class="cell">Средний минимум</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+        </section>
+        <section class="even-row">
+            <p class="cell">Рекордный максимум</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+        </section>
+        <section class="odd-row">
+            <p class="cell">Рекордный минимум</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+            <p class="cell">9&deg;</p>
+        </section>
+    </section>
+</main>
+<footer>
+    2018 &copy; Copyright
+</footer>
+</body>
 </html>

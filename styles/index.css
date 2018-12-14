@@ -1,0 +1,130 @@
+.city-img {
+    width: 20px;
+}
+.left-arrow {
+    float: left;
+    margin-top: 200px;
+}
+.right-arrow {
+    float: right;
+    margin-top: 200px;
+}
+.arrow {
+    width: 50px;
+}
+.content {
+    height: 550px;
+
+}
+.table {
+    margin-top: 10px;
+    display: inline-block;
+    width: 674px;
+
+}
+.five-days-table {
+    display: inline-block;
+    text-align: center;
+    width: 674px;
+    float: left;
+
+}
+.five-days-table:first-child {
+    border-top: 1px solid black;
+}
+
+.date:first-child {
+    border-left: 1px solid black;
+}
+.date {
+    display: inline-block;
+    width: 123.6px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    float: left;
+    padding: 5px;
+}
+p.date {
+    margin: 0;
+}
+.day-time {
+    display: inline-block;
+    font-size: 10px;
+}
+.day-time>p {
+    margin: 0;
+}
+.day-time>img {
+    width: 27px;
+}
+.temp-color-cold {
+    background-color: #b9e88b;
+}
+.temp-color-normal {
+    background-color: #f7e53b;
+}
+.temp-color-heat {
+    background-color: #f3a536;
+}
+.five-days-table .wnd-spd-row {
+}
+
+.five-days-table+.wnd-spd-row {
+    border: 1px solid black;
+    border-top: none;
+    padding: 5px;
+    background-color: #d8d8d8;
+    width: 661px;
+}
+.wnd-spd-block {
+    margin: 0;
+    display: inline-block;
+    background-color: #d8d8d8;
+    width: 22%;
+}
+.precip-value {
+    margin: 0;
+    display: inline-block;
+    width: 22%;
+    padding-top: 75px;
+}
+.sun-moon {
+    border: 1px solid black;
+    clear: both;
+    margin-top: 5px;
+    width: 672px;
+}
+.today {
+    float: left;
+    margin-left: 5px;
+    padding: 10px;
+}
+.sun-and-moon {
+    float: left;
+    margin-left: 55px;
+    padding: 10px;
+}
+.sun {
+    display: inline-block;
+    width: 50%;
+}
+.sun>img {
+    float: left;
+    margin-top: 1em;
+    margin-right: 10px;
+}
+.moon {
+    float: right;
+    width: 50%;
+}
+.moon>img {
+    float: left;
+    margin-top: 1em;
+    margin-right: 10px;
+}
+.sunrise {
+    margin: 47px 0;
+}
+.moonrise {
+    margin: 47px 0;
+}
