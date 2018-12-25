@@ -1,7 +1,7 @@
 // 1. Char count
 function countChar(str, char) {
     var length = str.length;
-    count = 0;
+    var count = 0;
     str = str.toLowerCase();
     char = char.toLowerCase();
     for (n=0; n<length; n++) {
@@ -14,14 +14,22 @@ function countChar(str, char) {
 console.log(countChar("Abrakadabra", "a"));
 
 // 2. Deep compare
-function deepCompare(a, b) {
-    if (a.one===b.one && a.two===b.two){
-        return true;
+function deepCompare(obj1, obj2){
+    for (prop in obj1){
+        if (obj2.hasOwnProperty(prop)){
+            if (obj1[prop] === obj2[prop]) continue; {
+                return false;
+            }
+        } else {
+            return false;
+        }
     }
-    else {
-        return false;
-    }
+    return true;
 }
+console.log(deepCompare({ one: 1, two: '2' }, { one: 1, two: 2 }));
+console.log(deepCompare({ one: 1, two: '2' }, { two: '2' }));
+console.log(deepCompare({ one: 1, two: '2' }, { two: '2', one: 1 }));
+console.log(deepCompare({ one: 1, two: '2' }, { one: 1, two: '2' }));
 
 // 3. Chess board
 function help(value) {
@@ -98,7 +106,11 @@ console.log(reverseInPlace([1, 2, 3, 4]));
 
 // 6. Concat and spread
 
-function mergeArrays(arr1, arr2) {
-    return arr1.concat(arr2);
+function mergeArrays(...arr) {
+    var newArray = [];
+    newArray = [...new Set([...newArray.concat(...arr)])];
+    return newArray;
+
 }
-console.log(mergeArrays(['1','2'],['3','4']));
+console.log(mergeArrays([1, 2], [3, 4], [5, 6]));
+console.log(mergeArrays([1, 2], [2, 4], [4, 6]));
