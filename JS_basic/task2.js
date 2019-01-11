@@ -29,20 +29,14 @@ function multiplyOrThrow(a, b) {
         throw 'MultiplicatorUnitFailure';
     }
 }
-
-function repeat(a, b) {
-    while (true) {
-        try {
-            return multiplyOrThrow(a, b);
-        }
-        catch (err) {
-            if (err=='MultiplicatorUnitFailure'){
-                console.log (err);
-            }
-        }
+function repeat(a,b) {
+    try {
+        return multiplyOrThrow(a, b);
+    }
+    catch (err) {
+        return repeat(a, b);
     }
 }
-
 console.log(repeat(2, 5))
 
 // 9. Qoutes in text
