@@ -52,7 +52,7 @@ function findNumbers(arr) {
     var result = [];
     for (var i=0;i<arr.length; i++){
         var el = arr[i];
-        var isValid = /\d/.test(el);
+        var isValid = /^(\+|-)\d|\d|[eE]|\./.test(el);
         if (isValid) {
         result.push(el);
         }
