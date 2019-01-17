@@ -4,11 +4,12 @@
 .left-arrow {
     float: left;
     margin-top: 40px;
+    margin-left: 200px;
 }
 .right-arrow {
     float: right;
     margin-top: 40px;
-    margin-right: 44px;
+    margin-right: 200px;
 }
 .arrow {
     width: 30px;
