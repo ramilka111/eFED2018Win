@@ -13,27 +13,43 @@ var curTemp3 = document.getElementById('current-temp3');
 var activeDay = 0;
 
 
-function nextDay(){
+// function nextDay(){
+//     if (activeDay<dayBlock.length -1){
+//         activeDay++;
+//         changeDay();
+//     } else {
+//         activeDay = 0;
+//         changeDay();
+//     }
+// }
+// function prevDay(){
+//     if (activeDay>0){
+//         activeDay--;
+//         changeDay();
+//     } else {
+//         activeDay = dayBlock.length - 1;
+//         changeDay();
+//     }
+// }
+rightArrow[0].addEventListener('click', function nextDay(){
     if (activeDay<dayBlock.length -1){
-        activeDay++;
-        changeDay();
+    activeDay++;
+    changeDay();
     } else {
-        activeDay = 0;
-        changeDay();
+    activeDay = 0;
+    changeDay();
     }
-}
-function prevDay(){
-    if (activeDay>0){
-        activeDay--;
-        changeDay();
-    } else {
-        activeDay = dayBlock.length - 1;
-        changeDay();
-    }
-}
-rightArrow[0].addEventListener('click', nextDay());
+});
 
-leftArrow[0].addEventListener('click', prevDay());
+leftArrow[0].addEventListener('click', function prevDay(){
+    if (activeDay>0){
+    activeDay--;
+    changeDay();
+    } else {
+    activeDay = dayBlock.length - 1;
+    changeDay();
+    }
+});
 
 function changeDay() {
     for (let i=0; i<dayBlock.length; i++){
