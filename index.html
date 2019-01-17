@@ -24,11 +24,148 @@
             <input class='search' type="search" placeholder="Поиск" role="search" pattern="[A-ZА-ЯЁ][A-Za-zА-Яа-яЁё]{1,}">
         </section>
     </header>
-    <main class="content">
+    <main class="content" id="mainInfo" >
         <nav class="left-arrow">
             <a href="#"><img class="arrow" src="assets/left_arrow.jpg" alt="Левая стрелка"></a>
         </nav>
-        <section class="table">
+        <nav class="right-arrow">
+            <a href="#"><img class="arrow" src="assets/right_arrow.jpg" alt="Левая стрелка"></a>
+        </nav>
+        <section class='current' id="current-day">
+            <p class="current-date" id="current-date">Пт, 18 мая</p>
+            <section class="current-date">
+                <article class="current-day-time">
+                    <p>Ночь</p>
+                    <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                    <p class="temp-color-cold" id="current-temp0">+5 </p>
+                </article>
+                <article class="current-day-time">
+                    <p>Утро</p>
+                    <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                    <p class="temp-color-normal" id="current-temp1">+15 </p>
+                </article>
+                <article class="current-day-time">
+                    <p>День</p>
+                    <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                    <p class="temp-color-heat" id="current-temp2">+20 </p>
+                </article>
+                <article class="current-day-time">
+                    <p>Вечер</p>
+                    <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                    <p class="temp-color-normal" id="current-temp3">+12 </p>
+                </article>
+            </section>
+        </section>
+        <!--<section class='current hidden-block'>-->
+            <!--<p class="current-date">Сб, 19 мая</p>-->
+            <!--<section class="current-date">-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Ночь</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-cold">+15 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Утро</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-normal">-20 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>День</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-heat">+40 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Вечер</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-normal">+10 </p>-->
+                <!--</article>-->
+            <!--</section>-->
+        <!--</section>-->
+        <!--<section class='current hidden-block'>-->
+            <!--<p class="current-date">Вс, 20 мая</p>-->
+            <!--<section class="current-date">-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Ночь</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-cold">+10 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Утро</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-normal">+10 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>День</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-heat">+5 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Вечер</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-normal">+1 </p>-->
+                <!--</article>-->
+            <!--</section>-->
+        <!--</section>-->
+        <!--<section class='current hidden-block'>-->
+            <!--<p class="current-date">Пн, 21 мая</p>-->
+            <!--<section class="current-date">-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Ночь</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-cold">+10 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Утро</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-normal">-70 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>День</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-heat">+10 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Вечер</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-normal">+15 </p>-->
+                <!--</article>-->
+            <!--</section>-->
+        <!--</section>-->
+        <!--<section class='current hidden-block'>-->
+            <!--<p class="current-date">Вт, 22 мая</p>-->
+            <!--<section class="current-date">-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Ночь</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-cold">+16 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Утро</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-normal">+8 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>День</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-heat">+20 </p>-->
+                <!--</article>-->
+                <!--<article class="current-day-time">-->
+                    <!--<p>Вечер</p>-->
+                    <!--<img src="assets/Cloudy%20Weather.png" alt="Облачно"/>-->
+                    <!--<p class="temp-color-normal">+6 </p>-->
+                <!--</article>-->
+            <!--</section>-->
+        <!--</section>-->
+        <section class="day-blocks">
+            <div class="day-block current-day">пт</div>
+            <div class="day-block">сб</div>
+            <div class="day-block">вс</div>
+            <div class="day-block">пн</div>
+            <div class="day-block">вт</div>
+        </section>
+        <section class="table" id="inner-table">
+            <section class="not-dislay-block">
+
             <section class="five-days-table">
                 <p class="date">Пт, 18 мая</p>
                 <p class="date">Сб, 19 мая</p>
@@ -148,8 +285,9 @@
                     </article>
                 </section>
             </section>
+            </section>
             <section class="five-days-table wnd-spd-row" >
-                <span class="wnd-spd-row">Максимальная скорость ветра, м/с</span>
+                Максимальная скорость ветра, м/с
             </section>
             <section class="five-days-table">
                 <article class="date">
@@ -184,7 +322,7 @@
                 </article>
             </section>
             <section class="five-days-table wnd-spd-row" >
-                <span class="wnd-spd-row">Осадки, мм</span>
+                Осадки, мм
             </section>
             <section class="five-days-table">
                 <article class="date">
@@ -218,6 +356,9 @@
                     <p class="precip-value precip-value-high">4.6</p>
                 </article>
             </section>
+
+
+
             <section class="five-days-table sun-moon">
                 <span class="today">Пятница, 18 мая, сегодня</span>
                 <span class="sun-and-moon">Солнце и луна</span>
@@ -237,12 +378,11 @@
                 <span class="full-moon">Полнолуние - 28 июня, через 23 дня</span>
             </section>
         </section>
-        <nav class="right-arrow">
-            <a href="#"><img class="arrow" src="assets/right_arrow.jpg" alt="Левая стрелка"></a>
-        </nav>
+
     </main>
     <footer>
         2018 &copy; Copyright
     </footer>
+    <script type="text/javascript" src="./js/5-day.js"></script>
     </body>
 </html>
