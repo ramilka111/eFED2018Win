@@ -51,13 +51,15 @@
                     Ветер: 11км/ч
                 </span><br>
                 <nav class='inner-navigation'>
-                    <input type="button" class='btn' value="Температура">
-                    <input type="button" class='btn' value="Вероятность осадков">
-                    <input type="button" class='btn' value="Ветер">
+                    <input type="button" class='btn chart-btn checked' id="temp-btn" value="Температура">
+                    <input type="button" class='btn chart-btn' id='precip-btn' value="Вероятность осадков">
+                    <input type="button" class='btn chart-btn' id='wind-btn' value="Ветер">
                 </nav>
             </section>
-            <figure class='chart'>
-                <img src="assets/Group_5.png" alt="График температур">
+            <figure>
+                <img class='chart visible' src="assets/temperat.png" id="temp-chart" alt="Temperature chart">
+                <img class='chart' src="assets/precip.png" id="precip-chart" alt="Precip chart">
+                <img class='chart' src="assets/wind.png" id="wind-chart" alt="Wind chart">
             </figure>
             <section class="every-day-weather">
                 <span class="times">
@@ -117,5 +119,6 @@
         <footer>
             2018 &copy; Copyright
         </footer>
+        <script type="text/javascript" src="./js/today.js"></script>
     </body>
 </html>
