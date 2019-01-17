@@ -14,11 +14,12 @@
     width: 30px;
 }
 .content {
-    height: 570px;
+    height: 600px;
 
 }
 .table {
     margin-top: 10px;
+    margin-left: 50px;
     display: inline-block;
     width: 674px;
 
@@ -28,11 +29,8 @@
     text-align: center;
     width: 674px;
     float: left;
+}
 
-}
-.five-days-table:first-child {
-    border-top: 1px solid black;
-}
 
 
 .date:first-child {
@@ -97,7 +95,6 @@ p.date {
     clear: both;
     margin-top: 5px;
     width: 672px;
-    margin-left: 30px;
 }
 .today {
     float: left;
@@ -169,6 +166,7 @@ section.current-date {
     margin-left: 4px;
     margin-right: 4px;
     padding: 3px;
+    margin-bottom: 5px;
 }
 
 .current-day{
@@ -177,11 +175,4 @@ section.current-date {
 
 p.current-date{
     background-color: darkseagreen;
-}
-
-.hidden-block{
-    display: none;
-}
-.not-dislay-block{
-    display: none;
 }
