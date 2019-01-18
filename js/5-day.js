@@ -61,7 +61,8 @@ function init() {
     for (let i=0; i<dayBlock.length; i++) {
         dayBlock[i].addEventListener('click', function () {
             activeDay = i;
-            changeDay();
+            changeDay(i);
+            changeDay(activeDay);
         });
     }
 }

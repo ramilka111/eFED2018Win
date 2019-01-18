@@ -1,6 +1,4 @@
-var tempBtn = document.getElementById('temp-btn');
-var precipBtn = document.getElementById('precip-btn');
-var windBtn = document.getElementById('wind-btn');
+
 var innerNav = document.getElementsByClassName('chart-btn');
 var charts = document.getElementsByClassName('chart');
 
@@ -19,10 +17,8 @@ function switchChart() {
 for (let i=0; i<innerNav.length; i++) {
     innerNav[i].addEventListener('click', function () {
         counter= i;
-        switchChart();
+        switchChart(i);
+        switchChart(counter);
     });
 }
 
-tempBtn.addEventListener('click', switchChart);
-precipBtn.addEventListener('click', switchChart);
-windBtn.addEventListener('click', switchChart);
