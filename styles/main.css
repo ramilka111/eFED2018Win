@@ -59,10 +59,17 @@ body {
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
-
+.checked{
+    background-color: #979797;
+}
 .chart {
-    border: 1px solid black;
-    margin: auto 0;
+    margin: auto auto;
+    width: 700px;
+    height: 90px;
+    display: none;
+}
+.visible{
+    display: inline-block;
 }
 
 .time {
@@ -127,8 +134,6 @@ footer{
     font-size: 20px;
     padding: 5px;
     line-height: 1.5em;
-    display:
-
 }
 
 

@@ -3,21 +3,24 @@
 }
 .left-arrow {
     float: left;
-    margin-top: 200px;
+    margin-top: 40px;
+    margin-left: 200px;
 }
 .right-arrow {
     float: right;
-    margin-top: 200px;
+    margin-top: 40px;
+    margin-right: 200px;
 }
 .arrow {
-    width: 50px;
+    width: 30px;
 }
 .content {
-    height: 550px;
+    height: 600px;
 
 }
 .table {
     margin-top: 10px;
+    margin-left: 50px;
     display: inline-block;
     width: 674px;
 
@@ -27,11 +30,9 @@
     text-align: center;
     width: 674px;
     float: left;
+}
 
-}
-.five-days-table:first-child {
-    border-top: 1px solid black;
-}
+
 
 .date:first-child {
     border-left: 1px solid black;
@@ -66,7 +67,9 @@ p.date {
 .temp-color-heat {
     background-color: #f3a536;
 }
-.five-days-table .wnd-spd-row {
+.wnd-spd-row {
+    text-align: center;
+    border: 1px solid black ;
 }
 
 .five-days-table+.wnd-spd-row {
@@ -74,7 +77,7 @@ p.date {
     border-top: none;
     padding: 5px;
     background-color: #d8d8d8;
-    width: 661px;
+    width: 662px;
 }
 .wnd-spd-block {
     margin: 0;
@@ -127,4 +130,50 @@ p.date {
 }
 .moonrise {
     margin: 47px 0;
+}
+
+.current {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 1px solid black;
+}
+.current>p, section, article>p {
+    margin: 0;
+}
+
+.current-day-time{
+    float: left;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+section.current-date {
+    border-top: 1px solid black;
+    height: 80px;
+
+}
+
+.day-blocks{
+    width: 300px;
+    margin-left: auto;
+    margin-right: 170px;
+    margin-top: 5px;
+}
+.day-block{
+    border: 1px solid black;
+    float: left;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.current-day{
+    background-color: darkseagreen;
+}
+
+p.current-date{
+    background-color: darkseagreen;
 }
