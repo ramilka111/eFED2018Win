@@ -1,4 +1,6 @@
-
+window.onload = function() {
+    init();
+};
 var rightArrow = document.getElementsByClassName('right-arrow');
 var leftArrow = document.getElementsByClassName('left-arrow');
 var dayBlock = document.getElementsByClassName('day-block');
@@ -99,6 +101,44 @@ var model = {
     ]
 };
 
-window.onload = function() {
-    init();
+// window.onload = function() {
+//     init();
+// };
+
+
+const APP_ID = 'e52f9d6625f3bb7f6633e0857f9acce9';
+const FORECAST_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/forecast?units=metric&lang=RU&APPID=${APP_ID}&q=`;
+const defaultCity = 'izhevsk';
+const page = {
+    init: function(){
+        this.getWeatherDetails(defaultCity, this.render);
+
+        const searchField = document.getElementById('search');
+
+        searchField.addEventListener('change', (event) => {
+            const city = event.target.value;
+            this.getWeatherDetails(city, this.render);
+        });
+    },
+    getWeatherDetails(city, callback){
+        const url = `${FORECAST_DETAILS_ENDPOINT}${city}`;
+        const xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+            if (this.readyState === 4 && this.status === 200){
+                console.log(JSON.parse(xhr.responseText));
+                callback(JSON.parse(xhr.responseText));
+            }
+        };
+
+        xhr.open('GET', url, true);
+        xhr.send();
+    },
+    render(data){
+        const temp = Math.floor(data.list[1].main.temp);
+        const cityImg = data.list[1].weather[0].icon;
+        document.getElementById('temp').innerHTML = `${temp}&deg;C`;
+
+    },
 };
+
+page.init();
