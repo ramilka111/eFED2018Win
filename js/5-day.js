@@ -108,10 +108,12 @@ var model = {
 
 const APP_ID = 'e52f9d6625f3bb7f6633e0857f9acce9';
 const FORECAST_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/forecast?units=metric&lang=RU&APPID=${APP_ID}&q=`;
+const WEATHER_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/weather?units=metric&lang=ru&APPID=${APP_ID}&q=`;
 const defaultCity = 'izhevsk';
 const page = {
     init: function(){
         this.getWeatherDetails(defaultCity, this.render);
+        this.getForecastDetails(defaultCity, this.renderForecast);
 
         const searchField = document.getElementById('search');
 
@@ -120,7 +122,7 @@ const page = {
             this.getWeatherDetails(city, this.render);
         });
     },
-    getWeatherDetails(city, callback){
+    getForecastDetails(city, callback){
         const url = `${FORECAST_DETAILS_ENDPOINT}${city}`;
         const xhr = new XMLHttpRequest();
         xhr.onload = function() {
@@ -133,10 +135,35 @@ const page = {
         xhr.open('GET', url, true);
         xhr.send();
     },
-    render(data){
+    getWeatherDetails(city, callback){
+        const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
+        const xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+            if (this.readyState === 4 && this.status === 200){
+                console.log(JSON.parse(xhr.responseText));
+                callback(JSON.parse(xhr.responseText));
+            }
+        };
+
+        xhr.open('GET', url, true);
+        xhr.send();
+    },
+    renderForecast(data){
         const temp = Math.floor(data.list[1].main.temp);
         const cityImg = data.list[1].weather[0].icon;
         document.getElementById('temp').innerHTML = `${temp}&deg;C`;
+
+    },
+    render(data){
+        const sunrise = new Date(data.sys.sunrise);
+        const sunriseTimeHours = sunrise.toLocaleTimeString({hour: '2-digit', minute:'2-digit'});
+
+        const sunset = new Date(data.sys.sunset);
+        const sunsetTimeHours = sunset.toLocaleTimeString({hour: '2-digit', minute:'2-digit'});
+
+
+        document.getElementById('sunrise').innerHTML = `Восход - ${sunriseTimeHours}`;
+        document.getElementById('sunset').innerHTML = `Закат - ${sunsetTimeHours}`;
 
     },
 };
