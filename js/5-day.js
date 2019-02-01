@@ -155,10 +155,10 @@ const page = {
 
     },
     render(data){
-        const sunrise = new Date(data.sys.sunrise);
+        const sunrise = new Date(data.sys.sunrise * 1000);
         const sunriseTimeHours = sunrise.toLocaleTimeString({hour: '2-digit', minute:'2-digit'});
 
-        const sunset = new Date(data.sys.sunset);
+        const sunset = new Date(data.sys.sunset * 1000);
         const sunsetTimeHours = sunset.toLocaleTimeString({hour: '2-digit', minute:'2-digit'});
 
 
