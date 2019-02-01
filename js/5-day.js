@@ -26,7 +26,6 @@ function switchDay(diff) {
     } else {
         activeDay = newValue
     }
-
     changeDay();
 }
 
@@ -101,9 +100,6 @@ var model = {
     ]
 };
 
-// window.onload = function() {
-//     init();
-// };
 
 
 const APP_ID = 'e52f9d6625f3bb7f6633e0857f9acce9';
@@ -150,7 +146,7 @@ const page = {
     },
     renderForecast(data){
         const temp = Math.floor(data.list[1].main.temp);
-        const cityImg = data.list[1].weather[0].icon;
+        // const cityImg = data.list[1].weather[0].icon;
         document.getElementById('temp').innerHTML = `${temp}&deg;C`;
 
     },
@@ -160,7 +156,6 @@ const page = {
 
         const sunset = new Date(data.sys.sunset * 1000);
         const sunsetTimeHours = sunset.toLocaleTimeString({hour: '2-digit', minute:'2-digit'});
-
 
         document.getElementById('sunrise').innerHTML = `Восход - ${sunriseTimeHours}`;
         document.getElementById('sunset').innerHTML = `Закат - ${sunsetTimeHours}`;

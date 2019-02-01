@@ -3,20 +3,7 @@ var model = {
   currentDay: 0
 };
 
-function currentDay() {
-  var detailsNode = document.createElement('section');
-  detailsNode.classList.add('date');
-
-  var dayTime = document.createElement('article');
-  dayTime.classList.add('day-time');
-
-  dayTime.innerHTML = '+5';
-
-  detailsNode.appendChild(dayTime);
-  return detailsNode;
-}
-
-function dayOfWeek(name, isCurrent){
+function getDayOfWeek(name, isCurrent){
   var createNode = document.createElement('div');
   createNode.style.border = '1px solid black';
   createNode.innerHTML = name;
@@ -33,7 +20,7 @@ function renderDays (){
   }
   renderCurrentDay();
   for (var i =0; i<model.days.length; i++){
-    var item = dayOfWeek(model.days[i], i===model.currentDay);
+    var item = getDayOfWeek(model.days[i], i===model.currentDay);
     innerTable.appendChild(item);
 
   }
