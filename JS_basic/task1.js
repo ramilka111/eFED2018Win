@@ -11,7 +11,7 @@ function countChar(str, char) {
     }
     return count;
 }
-console.log(countChar("Abrakadabra", "a"));
+console.log(countChar('Abrakadabra', 'a'));
 
 // 2. Deep compare
 function deepCompare(obj1, obj2){
@@ -36,15 +36,15 @@ function help(value) {
     if (value%2===0){
         return '#';
     }
-    return " ";
+    return ' ';
 }
 function chessBoard(columns, rows) {
-    var board = "";
+    var board = '';
     for (var row = 0; row<rows; row++) {
         for (var col = 0; col<columns; col++) {
             board = board + help (col + row);
         }
-        board = board + '\n'
+        board = board + '\n';
     }
     return board;
 }
@@ -80,7 +80,7 @@ function reverseArray(arr) {
         arr2.push(arr[i]);
     }
     return arr2;
- }
+}
 console.log(reverseArray([1, 2, 3, 4]));
 
 

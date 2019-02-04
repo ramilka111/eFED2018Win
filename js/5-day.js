@@ -24,17 +24,17 @@ function switchDay(diff) {
     } else if (newValue > maxValue) {
         activeDay = minValue;
     } else {
-        activeDay = newValue
+        activeDay = newValue;
     }
     changeDay();
 }
 
 function nextDay() {
-    switchDay(+1)
+    switchDay(+1);
 }
 
 function prevDay() {
-    switchDay(-1)
+    switchDay(-1);
 }
 
 rightArrow[0].addEventListener('click', nextDay);
@@ -59,6 +59,7 @@ function changeDay() {
 
 function init() {
     changeDay();
+
     for (let i=0; i<dayBlock.length; i++) {
         dayBlock[i].addEventListener('click', function () {
             activeDay = i;
@@ -93,11 +94,11 @@ var model = {
         },
         {
             name: 'Вт, 24 мая',
-            temps: ['+10','+10','+15','+12']
+            temps: ['+10','+10','+15','+12'],
 
-        }
+        },
 
-    ]
+    ],
 };
 
 
@@ -147,7 +148,7 @@ const page = {
     renderForecast(data){
         const temp = Math.floor(data.list[1].main.temp);
         // const cityImg = data.list[1].weather[0].icon;
-        document.getElementById('temp').innerHTML = `${temp}&deg;C`;
+        document.getElementById('current-temp').innerHTML = `${temp}&deg;C`;
 
     },
     render(data){
