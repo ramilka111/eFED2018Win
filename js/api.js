@@ -14,6 +14,7 @@ const page = {
         searchField.addEventListener('change', (event) => {
             const city = event.target.value;
             this.getWeatherDetails(city, this.render);
+            this.getForecastDetails(city, this.renderForecast);
         });
     },
     getWeatherDetails(city, callback){
