@@ -38,7 +38,10 @@ body {
 }
 
 .current_t {
-    line-height: 0;
+    display: inline-block;
+    position: absolute;
+    top: 34%;
+    margin-top: -0.625em;
     font-size: 20px;
     
 }
@@ -135,5 +138,4 @@ footer{
     padding: 5px;
     line-height: 1.5em;
 }
-
 

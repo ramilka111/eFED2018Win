@@ -37,14 +37,14 @@ function repeat(a,b) {
         return repeat(a, b);
     }
 }
-console.log(repeat(2, 5))
+console.log(repeat(2, 5));
 
 // 9. Qoutes in text
 
 function replaceQuotes(string) {
-    return string.replace(/'/g ,'"')
+    return string.replace(/'/g ,'"');
 }
-console.log(replaceQuotes("I`m the 'hero'"));
+console.log(replaceQuotes('I`m the \'hero\''));
 
 // 10. Find numbers
 
@@ -54,40 +54,40 @@ function findNumbers(arr) {
         var el = arr[i];
         var isValid = /^(\+|-)\d|\d|[eE]|\./.test(el);
         if (isValid) {
-        result.push(el);
+            result.push(el);
         }
     }
     return result;
 }
 
-console.log(findNumbers(["1", "-1", "+15", "1.55", ".5", "5.", "1.3e2", "1E-4", "1e+12"]));
-console.log(findNumbers(["1a", "+-1", "1.2.3", "1+1", "1e4.5", ".5.", "1f5", "."]));
+console.log(findNumbers(['1', '-1', '+15', '1.55', '.5', '5.', '1.3e2', '1E-4', '1e+12']));
+console.log(findNumbers(['1a', '+-1', '1.2.3', '1+1', '1e4.5', '.5.', '1f5', '.']));
 
 // 11. Day and monnth
 
 function getNames(date) {
     var dayOfWeek = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
     ];
     var month = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
     ];
 
     return month[date.getMonth()] + ', ' + dayOfWeek[date.getDay()];
@@ -99,7 +99,7 @@ console.log(getNames(new Date()));
 
 function differenceInYears(date1, date2) {
     if (date2>date1) {
-    var difference = (date2.getTime() - date1.getTime())/(1000 * 3600 * 24)/365;
+        var difference = (date2.getTime() - date1.getTime())/(1000 * 3600 * 24)/365;
     }
     else {
         difference = (date1.getTime() - date2.getTime())/(1000 * 3600 * 24)/365;

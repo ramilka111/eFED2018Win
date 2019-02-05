@@ -17,11 +17,11 @@
             <a href="historical-review.html"><input type='button' class='btn' value='История погоды'></a>
         </nav>
         <section class='search_string'>
-            <img class="city-img" src="assets/assets%2036px/cloud.png" alt="Облачно">
-            <span class="city">
-                34&deg; Ижевск, Россия
-            </span>
-            <input class='search' type="search" placeholder="Поиск" role="search" pattern="[A-ZА-ЯЁ][A-Za-zА-Яа-яЁё]{1,}">
+            <img id="current-weather-img" class="city-img" src="assets/assets%2036px/cloud.png" alt="Облачно">
+            <span id="current-temp" class="city">34&deg;</span>
+            <span id="location" class="city">Ижевск, Россия</span>
+
+            <input id='search' class='search' type="search" placeholder="Поиск" role="search" pattern="[A-ZА-ЯЁ][A-Za-zА-Яа-яЁё]{1,}">
         </section>
     </header>
     <main class="content" id="mainInfo" >
@@ -367,8 +367,8 @@
             <section class="sun">
                 <img src="assets/sun.png" alt="Солнце">
                 <p class="day-duration">Долгота дня - 16ч 43мин</p>
-                <p class="sunrise">Восход - 4:02</p>
-                <p class="sunset">Заход - 20:45</p>
+                <p id="sunrise" class="sunrise">Восход - 4:02</p>
+                <p id="sunset" class="sunset">Заход - 20:45</p>
                 <span class="day-compare">Сегодня день на 2 минуты длиннее, чем вчера</span>
             </section>
             <section class="moon">

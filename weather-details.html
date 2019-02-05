@@ -16,38 +16,38 @@
                 <a href="historical-review.html"><input type='button' class='btn' value='История погоды'></a>
             </nav>
             <section class='search_string'>
-                <span class="pollution">
+                <span id="pollution" class="pollution">
                     Загрязнение воздуха: 8.16836
                 </span>
 
-                <input class='search' type="search" placeholder="Поиск" role="search" pattern="[A-ZА-ЯЁ][A-Za-zА-Яа-яЁё]{1,}">
+                <input id ='search' class='search' type="search" placeholder="Поиск" role="search" pattern="[A-ZА-ЯЁ][A-Za-zА-Яа-яЁё]{1,}">
 
             </section>
         </header>
         <main class='content'>
             <section class='left-block'>
-                <span class='city'>
+                <span class='city' id="location">
                     Ижевск, Россия
                 </span><br>
-                <span class='day-week'>
+                <span id='day-week' class='day-week'>
                     Среда
                 </span><br>
-                <span class='weather'>
+                <span id='weather-cond' class='weather'>
                     Облачно
                 </span><br>
-                <img class='current-weather-img' src="assets/Cloudy%20Weather.png" alt="Облачная погода">
-                <span class="current_t">
+                <img id="current-weather-img" class='current-weather-img' src="assets/Cloudy%20Weather.png" alt="Облачная погода">
+                <div class="current_t" id="current-temp">
                     22 &deg;C
-                </span>
+                </div>
             </section>
             <section class='right-block'>
-                <span class='probability-precip'>
+                <span id='probability-precip' class='probability-precip'>
                     Вероятность осадков: 20%
                 </span> <br>
-                <span class='humidity'>
+                <span id='humidity' class='humidity'>
                     Влажность: 45%
                 </span><br>
-                <span class='wnd-spd'>
+                <span id='wnd-spd' class='wnd-spd'>
                     Ветер: 11км/ч
                 </span><br>
                 <nav class='inner-navigation'>
@@ -98,21 +98,6 @@
                         <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
                         <p class="temp-range">24&deg; 10&deg;</p>
                     </section>
-                    <section class="day">
-                        <p class="day-of-week">сб</p>
-                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                        <p class="temp-range">24&deg; 10&deg;</p>
-                    </section>
-                    <section class="day">
-                        <p class="day-of-week">вс</p>
-                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                        <p class="temp-range">24&deg; 10&deg;</p>
-                    </section>
-                    <section class="day">
-                        <p class="day-of-week">пн</p>
-                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                        <p class="temp-range">24&deg; 10&deg;</p>
-                    </section>
                 </section>
             </section>
         </main>
@@ -120,5 +105,6 @@
             2018 &copy; Copyright
         </footer>
         <script type="text/javascript" src="./js/today.js"></script>
+        <script type="text/javascript" src="./js/api.js"></script>
     </body>
 </html>
