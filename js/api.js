@@ -2,12 +2,12 @@ const APP_ID = 'e52f9d6625f3bb7f6633e0857f9acce9';
 const WEATHER_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/weather?units=metric&lang=ru&APPID=${APP_ID}&q=`;
 const AIRPOLLUTION_DETAILS_ENDPOINT = `https://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=${APP_ID}`;
 const FORECAST_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/forecast?units=metric&lang=RU&APPID=${APP_ID}&q=`;
-const defaultCity = 'izhevsk';
+const DEFAULT_CITY = 'izhevsk';
 const page = {
     init() {
-        this.getWeatherDetails(defaultCity, this.render);
-        this.getAirPollution(defaultCity, this.renderAirPollution);
-        this.getForecastDetails(defaultCity, this.renderForecast);
+        this.getWeatherDetails(DEFAULT_CITY, this.render);
+        this.getAirPollution(DEFAULT_CITY, this.renderAirPollution);
+        this.getForecastDetails(DEFAULT_CITY, this.renderForecast);
 
         const searchField = document.getElementById('search');
 
@@ -17,6 +17,7 @@ const page = {
             this.getForecastDetails(city, this.renderForecast);
         });
     },
+
     getWeatherDetails(city, callback){
         const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
         const xhr = new XMLHttpRequest();
@@ -29,6 +30,7 @@ const page = {
         xhr.open('GET', url, true);
         xhr.send();
     },
+
     getAirPollution(city, callback){
         const url = `${AIRPOLLUTION_DETAILS_ENDPOINT}`;
         const xhr = new XMLHttpRequest();
@@ -41,6 +43,7 @@ const page = {
         xhr.open('GET', url, true);
         xhr.send();
     },
+
     getForecastDetails(city, callback) {
         const url = `${FORECAST_DETAILS_ENDPOINT}${city}`;
         const xhr = new XMLHttpRequest();
@@ -76,6 +79,7 @@ const page = {
         document.getElementById('weather-cond').innerHTML = `${weatherCondValue}`;
         document.getElementById('day-week').innerHTML = date.toLocaleDateString('ru-Ru', {weekday: 'long'});
     },
+
     renderAirPollution(data){
         const pollution = data.data[4].value;
 
@@ -84,6 +88,7 @@ const page = {
             pollutionElem.innerHTML = `Загрязнение воздуха: ${pollution}`;
         }
     },
+
     renderForecast(data) {
         const weekDays = formatForecastData(data);
         const dayBlocks = document.querySelectorAll('.day');
