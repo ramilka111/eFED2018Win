@@ -106,11 +106,11 @@ var model = {
 const APP_ID = 'e52f9d6625f3bb7f6633e0857f9acce9';
 const FORECAST_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/forecast?units=metric&lang=RU&APPID=${APP_ID}&q=`;
 const WEATHER_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/weather?units=metric&lang=ru&APPID=${APP_ID}&q=`;
-const defaultCity = 'izhevsk';
+const DEFAULT_CITY = 'izhevsk';
 const page = {
     init: function(){
-        this.getWeatherDetails(defaultCity, this.render);
-        this.getForecastDetails(defaultCity, this.renderForecast);
+        this.getWeatherDetails(DEFAULT_CITY, this.render);
+        this.getForecastDetails(DEFAULT_CITY, this.renderForecast);
 
         const searchField = document.getElementById('search');
 
@@ -119,6 +119,7 @@ const page = {
             this.getWeatherDetails(city, this.render);
         });
     },
+
     getForecastDetails(city, callback){
         const url = `${FORECAST_DETAILS_ENDPOINT}${city}`;
         const xhr = new XMLHttpRequest();
@@ -132,6 +133,7 @@ const page = {
         xhr.open('GET', url, true);
         xhr.send();
     },
+
     getWeatherDetails(city, callback){
         const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
         const xhr = new XMLHttpRequest();
@@ -145,12 +147,14 @@ const page = {
         xhr.open('GET', url, true);
         xhr.send();
     },
+
     renderForecast(data){
         const temp = Math.floor(data.list[1].main.temp);
         // const cityImg = data.list[1].weather[0].icon;
         document.getElementById('current-temp').innerHTML = `${temp}&deg;C`;
 
     },
+
     render(data){
         const sunrise = new Date(data.sys.sunrise * 1000);
         const sunriseTimeHours = sunrise.toLocaleTimeString({hour: '2-digit', minute:'2-digit'});
