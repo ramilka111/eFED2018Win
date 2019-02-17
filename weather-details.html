@@ -6,6 +6,7 @@
         <meta name="author" content="Ramil Shakirov">
         <meta name="keywords" content="weather, 5-day weather, Izhevsk, wind speed, humidity, temperature, current weather">
         <meta name="description" content="Today's weather forecast">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type='text/css' href="styles/main.css">
     </head>
     <body>
@@ -25,6 +26,7 @@
             </section>
         </header>
         <main class='content'>
+            <div class="info">
             <section class='left-block'>
                 <span class='city' id="location">
                     Ижевск, Россия
@@ -35,14 +37,16 @@
                 <span id='weather-cond' class='weather'>
                     Облачно
                 </span><br>
-                <img id="current-weather-img" class='current-weather-img' src="assets/Cloudy%20Weather.png" alt="Облачная погода">
-                <div class="current_t" id="current-temp">
-                    22 &deg;C
+                <div class="current_temp">
+                    <img id="current-weather-img" class='current-weather-img' src="assets/Cloudy%20Weather.png" alt="Облачная погода">
+                    <div class="current_t" id="current-temp">
+                        22 &deg;C
+                    </div>
                 </div>
             </section>
             <section class='right-block'>
                 <span id='probability-precip' class='probability-precip'>
-                    Вероятность осадков: 20%
+                    Осадки: 20%
                 </span> <br>
                 <span id='humidity' class='humidity'>
                     Влажность: 45%
@@ -56,50 +60,53 @@
                     <input type="button" class='btn chart-btn' id='wind-btn' value="Ветер">
                 </nav>
             </section>
-            <figure>
-                <img class='chart visible' src="assets/temperat.png" id="temp-chart" alt="Temperature chart">
-                <img class='chart' src="assets/precip.png" id="precip-chart" alt="Precip chart">
-                <img class='chart' src="assets/wind.png" id="wind-chart" alt="Wind chart">
-            </figure>
-            <section class="every-day-weather">
-                <span class="times">
-                    <time class="time">17:00</time>
-                    <time class="time">20:00</time>
-                    <time class="time">23:00</time>
-                    <time class="time">02:00</time>
-                    <time class="time">05:00</time>
-                    <time class="time">08:00</time>
-                    <time class="time">11:00</time>
-                    <time class="time">14:00</time>
-                </span>
-                <section class="week-info">
-                    <section class="day">
-                        <p class="day-of-week">пн</p>
-                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                        <p class="temp-range">24&deg; 10&deg;</p>
-                    </section>
-                    <section class="day">
-                        <p class="day-of-week">вт</p>
-                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                        <p  class="temp-range">24&deg; 10&deg;</p>
-                    </section>
-                    <section class="day">
-                        <p class="day-of-week">ср</p>
-                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                        <p class="temp-range">24&deg; 10&deg;</p>
-                    </section>
-                    <section class="day">
-                        <p class="day-of-week">чт</p>
-                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                        <p class="temp-range">24&deg; 10&deg;</p>
-                    </section>
-                    <section class="day">
-                        <p class="day-of-week">пт</p>
-                        <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
-                        <p class="temp-range">24&deg; 10&deg;</p>
+            </div>
+            <div class="charts-and-info">
+                <figure>
+                    <img class='chart visible' src="assets/temperat.png" id="temp-chart" alt="Temperature chart">
+                    <img class='chart' src="assets/precip.png" id="precip-chart" alt="Precip chart">
+                    <img class='chart' src="assets/wind.png" id="wind-chart" alt="Wind chart">
+                </figure>
+                <section class="every-day-weather">
+                    <span class="times">
+                        <time class="time">17:00</time>
+                        <time class="time">20:00</time>
+                        <time class="time">23:00</time>
+                        <time class="time">02:00</time>
+                        <time class="time">05:00</time>
+                        <time class="time">08:00</time>
+                        <time class="time">11:00</time>
+                        <time class="time">14:00</time>
+                    </span>
+                    <section class="week-info">
+                        <section class="day">
+                            <p class="day-of-week">пн</p>
+                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                            <p class="temp-range">24&deg; 10&deg;</p>
+                        </section>
+                        <section class="day">
+                            <p class="day-of-week">вт</p>
+                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                            <p  class="temp-range">24&deg; 10&deg;</p>
+                        </section>
+                        <section class="day">
+                            <p class="day-of-week">ср</p>
+                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                            <p class="temp-range">24&deg; 10&deg;</p>
+                        </section>
+                        <section class="day">
+                            <p class="day-of-week">чт</p>
+                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                            <p class="temp-range">24&deg; 10&deg;</p>
+                        </section>
+                        <section class="day">
+                            <p class="day-of-week">пт</p>
+                            <img src="assets/Cloudy%20Weather.png" alt="Облачно"/>
+                            <p class="temp-range">24&deg; 10&deg;</p>
+                        </section>
                     </section>
                 </section>
-            </section>
+            </div>
         </main>
         <footer>
             2018 &copy; Copyright
