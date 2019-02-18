@@ -1,18 +1,25 @@
 body {
-    width: 800px;
+    max-width: 80%;
     font-family: Arial, serif;
-    margin: 0 auto;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header {
-    width: 798px;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
 }
 
 .navigation {
     border-bottom: 1px solid black;
     padding: 10px;
     background-color: #d8d8d8;
+    display: flex;
+    justify-content: flex-start;
+
 }
 
 .btn {
@@ -22,6 +29,8 @@ body {
 .search_string {
     padding: 10px;
     background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
 }
 .search {
     float: right;
@@ -33,53 +42,66 @@ body {
 
 .left-block {
     display: inline-block;
-    height: 150px;
-    margin-left: 20px;
+    width: 50%;
 }
 
+.current_temp {
+    display: flex;
+}
 .current_t {
     display: inline-block;
-    position: absolute;
-    top: 34%;
-    margin-top: -0.625em;
     font-size: 20px;
-    
+    align-self: center;
+    margin-left: 5px;
 }
 
 .right-block {
     display: inline-block;
-    float: right;
-    height: 150px;
+
     width: 50%;
 }
 
 .inner-navigation {
+    display: flex;
+    flex-direction: row;
     padding-top: 10px;
 }
 
-.content {    
-    padding: 10px;
+.info {
+    display: flex;
+}
+.content {
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
 .checked{
     background-color: #979797;
 }
+figure {
+    display: flex;
+    justify-content: center;
+
+}
 .chart {
-    margin: auto auto;
-    width: 700px;
-    height: 90px;
+    width: 80%;
     display: none;
 }
+
 .visible{
-    display: inline-block;
+    display: flex;
 }
 
-.time {
-    display: inline-block;
-    width: 90px;
+.times {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
+.week-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .day {
     display: inline-block;
     width: 90px;
@@ -95,10 +117,7 @@ p.temp-range {
 .day:hover {
     outline: 1px solid gray;
 }
-.every-day-weather {
-    text-align: center;
-    margin-top: 50px;
-}
+
 footer{
     display: block;
     padding: 10px 0;
@@ -139,3 +158,153 @@ footer{
     line-height: 1.5em;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    body {
+        max-width: 100%;
+        margin: 0;
+    }
+    .navigation {
+        flex-direction: column;
+        padding: 5px 10px;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 1px;
+    }
+    .search_string {
+        flex-direction: column;
+    }
+    .search {
+        margin-top: 10px;
+    }
+    .info {
+        flex-direction: column;
+    }
+    .left-block {
+        width: 100%;
+    }
+    .right-block {
+        width: 100%;
+    }
+    .times {
+        display: none;
+    }
+    figure {
+        display: none;
+    }
+    .week-info {
+        flex-direction: column;
+    }
+    .day {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        border-bottom: 1px solid black;
+    }
+    .day:first-child {
+        border-top: 1px solid black;
+    }
+    .day:last-child {
+        border-bottom: none;
+    }
+    .inner-navigation {
+        flex-direction: column;
+        margin: 10px;
+    }
+    .city {
+        font-size: 1em;
+    }
+    .sun-moon {
+        flex-direction: column;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+    .sun-and-moon-info {
+        flex-direction: column;
+    }
+    .sun, .moon {
+        width: 100%;
+        border-top: 1px solid black;
+    }
+    section>img {
+        width: 70px;
+    }
+    .table {
+        width: 100%;
+        border-right: none;
+        border-left: none;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+    body {
+        max-width: 100%;
+        margin: 0;
+    }
+    .navigation {
+        flex-direction: row;
+    }
+    .search_string {
+        flex-direction: column;
+    }
+    .search {
+        margin-top: 10px;
+    }
+    .btn {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+    .inner-navigation {
+        flex-direction: column;
+    }
+    .sun-and-moon-info {
+        flex-direction: column;
+    }
+    .sun, .moon {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    body {
+        max-width: 100%;
+        margin: 0;
+    }
+    .navigation {
+        flex-grow: 1;
+    }
+
+    .btn {
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+    .inner-navigation {
+        flex-direction: column;
+    }
+    .times {
+        margin-top: 20px;
+    }
+    .week-info {
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .btn {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+    .charts-and-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .times {
+        margin-top: 20px;
+    }
+    .week-info {
+        margin: 20px 0;
+    }
+
+}

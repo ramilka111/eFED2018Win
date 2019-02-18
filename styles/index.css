@@ -1,48 +1,54 @@
 .city-img {
     width: 20px;
 }
-.left-arrow {
-    float: left;
-    margin-top: 40px;
-    margin-left: 200px;
+.current-day-table {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
 }
-.right-arrow {
-    float: right;
-    margin-top: 40px;
-    margin-right: 200px;
-}
+/*.left-arrow {*/
+    /*float: left;*/
+    /*margin-top: 40px;*/
+    /*margin-left: 200px;*/
+/*}*/
+/*.right-arrow {*/
+    /*float: right;*/
+    /*margin-top: 40px;*/
+    /*margin-right: 200px;*/
+/*}*/
 .arrow {
     width: 30px;
 }
 .content {
-    height: 600px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .table {
     margin-top: 10px;
-    margin-left: 50px;
-    display: inline-block;
-    width: 674px;
-
+    display: flex;
+    flex-direction: column;
+    width: 90%;
 }
 .five-days-table {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     text-align: center;
-    width: 674px;
-    float: left;
+    justify-content: space-between;
+    max-width: 100%;
+
 }
-
-
-
 .date:first-child {
     border-left: 1px solid black;
 }
 .date {
-    display: inline-block;
-    width: 123.6px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
-    float: left;
     padding: 5px;
 }
 p.date {
@@ -72,94 +78,101 @@ p.date {
     border: 1px solid black ;
 }
 
-.five-days-table+.wnd-spd-row {
+.precips {
     border: 1px solid black;
     border-top: none;
-    padding: 5px;
     background-color: #d8d8d8;
-    width: 662px;
+    text-align: center;
 }
 .wnd-spd-block {
     margin: 0;
     display: inline-block;
     background-color: #d8d8d8;
-    width: 22%;
 }
 .precip-value {
     margin: 0;
     display: inline-block;
-    width: 22%;
-    padding-top: 75px;
 }
 .sun-moon {
+    display: flex;
+    align-items: center;
     border: 1px solid black;
-    clear: both;
     margin-top: 5px;
-    width: 672px;
 }
 .today {
     float: left;
     margin-left: 5px;
     padding: 10px;
 }
+.today {
+    width: 50%;
+    text-align: center;
+}
 .sun-and-moon {
-    float: left;
-    margin-left: 55px;
-    padding: 10px;
+    width: 49%;
+    text-align: center;
+}
+.sun-and-moon-info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px 0;
 }
 .sun {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     width: 50%;
+}
+.sun-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
 }
 .sun>img {
-    float: left;
-    margin-top: 1em;
-    margin-right: 10px;
+
 }
 .moon {
-    float: right;
+    display: flex;
+    align-items: center;
     width: 50%;
 }
-.moon>img {
-    float: left;
-    margin-top: 1em;
-    margin-right: 10px;
+.moon-info {
+    display: flex;
+    flex-direction: column;
 }
-.sunrise {
-    margin: 47px 0;
-}
-.moonrise {
-    margin: 47px 0;
-}
+/*.moon>img {*/
+    /*float: left;*/
+    /*margin-top: 1em;*/
+    /*margin-right: 10px;*/
+/*}*/
 
 .current {
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     border: 1px solid black;
+    margin-bottom: 5px;
 }
-.current>p, section, article>p {
+.current>p, article>p {
     margin: 0;
 }
 
-.current-day-time{
-    float: left;
-    margin-left: 16px;
-    margin-right: 16px;
-}
+/*.current-day-time{*/
+    /*float: left;*/
+    /*margin-left: 16px;*/
+    /*margin-right: 16px;*/
+/*}*/
 
 section.current-date {
     border-top: 1px solid black;
-    height: 80px;
-
+    display: flex;
+    justify-content: space-around;
 }
 
 .day-blocks{
-    width: 300px;
-    margin-left: auto;
-    margin-right: 170px;
-    margin-top: 5px;
 }
 .day-block{
     border: 1px solid black;
@@ -176,4 +189,7 @@ section.current-date {
 
 p.current-date{
     background-color: darkseagreen;
+}
+.current-day-time {
+    padding: 5px;
 }
