@@ -17,8 +17,9 @@ body {
     border-bottom: 1px solid black;
     padding: 10px;
     background-color: #d8d8d8;
-    display: flex;
-    justify-content: flex-start;
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
+    display: inline-block;
 
 }
 
@@ -33,11 +34,18 @@ body {
     justify-content: space-between;
 }
 .search {
-    float: right;
+    width: 100%;
     padding: 5px;
     margin-top: -5px;
     border-radius: 5px;
     background-color: #e4e4e4;
+}
+.search-bar {
+    display: flex;
+
+}
+.search-bar::before {
+    content: url('../assets/iconfinder.png');
 }
 
 .left-block {
@@ -174,7 +182,7 @@ footer{
     .search_string {
         flex-direction: column;
     }
-    .search {
+    .search-bar {
         margin-top: 10px;
     }
     .info {
@@ -249,7 +257,7 @@ footer{
     .search_string {
         flex-direction: column;
     }
-    .search {
+    .search-bar {
         margin-top: 10px;
     }
     .btn {
