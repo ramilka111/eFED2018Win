@@ -38,8 +38,8 @@
     text-align: center;
     justify-content: space-between;
     max-width: 100%;
-
 }
+
 .date:first-child {
     border-left: 1px solid black;
 }

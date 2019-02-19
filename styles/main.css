@@ -129,15 +129,15 @@ p.temp-range {
 }
 
 #spinner {
-    position: absolute;
-    left: 45%;
-    top: 35%;
-    border: 16px solid white; /* Light grey */
-    border-top: 16px solid black; /* Blue */
+    position: fixed;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    border: 16px solid white;
+    border-top: 16px solid black;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
+    width: 60px;
+    height: 60px;
+    animation: spin 4s linear infinite;
 }
 @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -145,7 +145,7 @@ p.temp-range {
 }
 
 #overlay{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -274,6 +274,9 @@ footer{
         width: 100%;
         border-right: none;
         border-left: none;
+    }
+    .date:last-child {
+        display: none;
     }
 }
 
