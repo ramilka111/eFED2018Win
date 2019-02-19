@@ -107,6 +107,8 @@ const APP_ID = 'e52f9d6625f3bb7f6633e0857f9acce9';
 const FORECAST_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/forecast?units=metric&lang=RU&APPID=${APP_ID}&q=`;
 const WEATHER_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/weather?units=metric&lang=ru&APPID=${APP_ID}&q=`;
 const DEFAULT_CITY = 'izhevsk';
+const SPINNER = document.getElementById('spinner');
+const OVERLAY = document.getElementById('overlay');
 const page = {
     init: function(){
         this.getWeatherDetails(DEFAULT_CITY, this.render);
@@ -121,6 +123,7 @@ const page = {
     },
 
     getForecastDetails(city, callback){
+        showSpinner();
         const url = `${FORECAST_DETAILS_ENDPOINT}${city}`;
         const xhr = new XMLHttpRequest();
         xhr.onload = function() {
@@ -128,6 +131,7 @@ const page = {
                 console.log(JSON.parse(xhr.responseText));
                 callback(JSON.parse(xhr.responseText));
             }
+            hideSpinner();
         };
 
         xhr.open('GET', url, true);
@@ -169,3 +173,13 @@ const page = {
 };
 
 page.init();
+
+function showSpinner() {
+    OVERLAY.style.display = 'block';
+    SPINNER.style.display = 'block';
+}
+function hideSpinner() {
+    setTimeout(function(){
+        OVERLAY.style.display = 'none';
+        SPINNER.style.display = 'none';}, 1500  );
+}

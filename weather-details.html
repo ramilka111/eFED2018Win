@@ -20,9 +20,9 @@
                 <span id="pollution" class="pollution">
                     Загрязнение воздуха: 8.16836
                 </span>
-
-                <input id ='search' class='search' type="search" placeholder="Поиск" role="search" pattern="[A-ZА-ЯЁ][A-Za-zА-Яа-яЁё]{1,}">
-
+                <form class="search-bar" action="#">
+                    <input id ='search' class='search' type="search" placeholder="Поиск" role="search" pattern="[A-ZА-ЯЁ][A-Za-zА-Яа-яЁё]{1,}">
+                </form>
             </section>
         </header>
         <main class='content'>
@@ -111,6 +111,8 @@
         <footer>
             2018 &copy; Copyright
         </footer>
+        <div id="overlay"></div>
+        <div id="spinner"></div>
         <script type="text/javascript" src="./js/today.js"></script>
         <script type="text/javascript" src="./js/api.js"></script>
     </body>

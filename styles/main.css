@@ -8,6 +8,10 @@ body {
 }
 
 .header {
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -17,11 +21,10 @@ body {
     border-bottom: 1px solid black;
     padding: 10px;
     background-color: #d8d8d8;
-    display: flex;
-    justify-content: flex-start;
-
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
+    display: inline-block;
 }
-
 .btn {
     padding: 5px 10px;
 }
@@ -33,11 +36,18 @@ body {
     justify-content: space-between;
 }
 .search {
-    float: right;
+    width: 100%;
     padding: 5px;
     margin-top: -5px;
     border-radius: 5px;
     background-color: #e4e4e4;
+}
+.search-bar {
+    display: flex;
+
+}
+.search-bar::before {
+    content: url('../assets/iconfinder.png');
 }
 
 .left-block {
@@ -118,7 +128,36 @@ p.temp-range {
     outline: 1px solid gray;
 }
 
+#spinner {
+    position: fixed;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    border: 16px solid white;
+    border-top: 16px solid black;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 4s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.8;
+}
 footer{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
     display: block;
     padding: 10px 0;
     text-align: center;
@@ -174,7 +213,7 @@ footer{
     .search_string {
         flex-direction: column;
     }
-    .search {
+    .search-bar {
         margin-top: 10px;
     }
     .info {
@@ -236,6 +275,9 @@ footer{
         border-right: none;
         border-left: none;
     }
+    .date:last-child {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 767px) {
@@ -249,7 +291,7 @@ footer{
     .search_string {
         flex-direction: column;
     }
-    .search {
+    .search-bar {
         margin-top: 10px;
     }
     .btn {
@@ -277,7 +319,6 @@ footer{
     }
 
     .btn {
-        margin-bottom: 5px;
         margin-right: 10px;
     }
     .inner-navigation {
