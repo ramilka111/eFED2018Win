@@ -8,6 +8,10 @@ body {
 }
 
 .header {
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -150,6 +154,10 @@ p.temp-range {
     opacity: 0.8;
 }
 footer{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
     display: block;
     padding: 10px 0;
     text-align: center;
@@ -308,7 +316,6 @@ footer{
     }
 
     .btn {
-        margin-bottom: 5px;
         margin-right: 10px;
     }
     .inner-navigation {
