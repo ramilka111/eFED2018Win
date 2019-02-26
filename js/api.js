@@ -1,6 +1,6 @@
 const APP_ID = 'e52f9d6625f3bb7f6633e0857f9acce9';
 const WEATHER_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/weather?units=metric&lang=ru&APPID=${APP_ID}&q=`;
-const AIRPOLLUTION_DETAILS_ENDPOINT = `https://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=${APP_ID}`;
+// const AIRPOLLUTION_DETAILS_ENDPOINT = `https://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=${APP_ID}`;
 const FORECAST_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/forecast?units=metric&lang=RU&APPID=${APP_ID}&q=`;
 const DEFAULT_CITY = 'izhevsk';
 const SPINNER = document.getElementById('spinner');
@@ -9,16 +9,16 @@ const page = {
     init() {
         this.getWeatherDetails(DEFAULT_CITY).then(res => {
             this.render(res);
-        })
+        });
         this.getForecastDetails(DEFAULT_CITY).then(res =>  {
             this.renderForecast(res);
             return res;
         }).then(res => {
-            console.log('eeeeee', res)
+            console.log('eeeeee', res);
             return this.getAirPollution(res.city.coord).then(res => {
                 this.renderAirPollution(res);
             })
-        })
+        });
 
         const searchField = document.getElementById('search');
 
@@ -27,7 +27,7 @@ const page = {
             // this.getWeatherDetails(city, this.render);
             this.getWeatherDetails(city).then(res => {
                 this.render(res);
-            })
+            });
             this.getForecastDetails(city).then( res => {
                 this.renderForecast(res);
             });
@@ -52,7 +52,7 @@ const page = {
 
         return this.loadData(url)
             .then(res => {
-                hideSpinner()
+                hideSpinner();
                 return res
             })
     },
