@@ -13,8 +13,8 @@ function counter() {
     }
 }
 
-const counter1 = counter()
-console.log(counter1.next())
-console.log(counter1.next())
-console.log(counter1.next())
-console.log(counter1.prev())0
+const counter1 = counter();
+console.log(counter1.next());
+console.log(counter1.next());
+console.log(counter1.next());
+console.log(counter1.prev());

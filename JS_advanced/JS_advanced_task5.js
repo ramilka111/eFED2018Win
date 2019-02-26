@@ -8,7 +8,7 @@ function sumWith(number) {
 var number = 2;
 const obj = {
     currentValue: 3
-}
+};
 const sumWithBinded = sumWith.bind(obj);
 
 console.log(sumWithBinded(number));

@@ -10,5 +10,5 @@ function random() {
 
 Promise.all([random(), random(), random(), random(), random(), random(), random()]).then((res) => {
     console.log(res);
-})
+});
 

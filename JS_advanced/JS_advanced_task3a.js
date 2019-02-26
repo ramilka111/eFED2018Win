@@ -19,5 +19,5 @@ random(0)
     })
     .then(result => {
         console.log(result);
-    })
+    });
 
