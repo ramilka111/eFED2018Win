@@ -1,65 +1,70 @@
 const APP_ID = 'e52f9d6625f3bb7f6633e0857f9acce9';
 const WEATHER_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/weather?units=metric&lang=ru&APPID=${APP_ID}&q=`;
-const AIRPOLLUTION_DETAILS_ENDPOINT = `https://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=${APP_ID}`;
+// const AIRPOLLUTION_DETAILS_ENDPOINT = `https://api.openweathermap.org/pollution/v1/co/56,53/current.json?appid=${APP_ID}`;
 const FORECAST_DETAILS_ENDPOINT = `https://api.openweathermap.org/data/2.5/forecast?units=metric&lang=RU&APPID=${APP_ID}&q=`;
 const DEFAULT_CITY = 'izhevsk';
 const SPINNER = document.getElementById('spinner');
 const OVERLAY = document.getElementById('overlay');
 const page = {
     init() {
-        this.getWeatherDetails(DEFAULT_CITY, this.render);
-        this.getAirPollution(DEFAULT_CITY, this.renderAirPollution);
-        this.getForecastDetails(DEFAULT_CITY, this.renderForecast);
+        this.getWeatherDetails(DEFAULT_CITY).then(res => {
+            this.render(res);
+        });
+        this.getForecastDetails(DEFAULT_CITY).then(res =>  {
+            this.renderForecast(res);
+            return res;
+        }).then(res => {
+            console.log('eeeeee', res);
+            return this.getAirPollution(res.city.coord).then(res => {
+                this.renderAirPollution(res);
+            })
+        });
 
         const searchField = document.getElementById('search');
 
         searchField.addEventListener('change', (event) => {
             const city = event.target.value;
-            this.getWeatherDetails(city, this.render);
-            this.getForecastDetails(city, this.renderForecast);
+            // this.getWeatherDetails(city, this.render);
+            this.getWeatherDetails(city).then(res => {
+                this.render(res);
+            });
+            this.getForecastDetails(city).then( res => {
+                this.renderForecast(res);
+            });
         });
     },
 
-    getWeatherDetails(city, callback){
+    loadData(url) {
+        console.log(url);
+        return fetch(url)
+          .then(function (res) {
+              return res.json();
+          })
+          .then(res => {
+              console.log(res);
+              return res;
+          })
+    },
+
+    getWeatherDetails(city){
         showSpinner();
-
         const url = `${WEATHER_DETAILS_ENDPOINT}${city}`;
-        const xhr = new XMLHttpRequest();
-        xhr.onload = function() {
-            if (this.readyState === 4 && this.status === 200){
-                console.log(JSON.parse(xhr.responseText));
-                callback(JSON.parse(xhr.responseText));
-            }
-            hideSpinner();
-        };
-        xhr.open('GET', url, true);
-        xhr.send();
+
+        return this.loadData(url)
+            .then(res => {
+                hideSpinner();
+                return res
+            })
     },
 
-    getAirPollution(city, callback){
-        const url = `${AIRPOLLUTION_DETAILS_ENDPOINT}`;
-        const xhr = new XMLHttpRequest();
-        xhr.onload = function() {
-            if (this.readyState === 4 && this.status === 200){
-                console.log(JSON.parse(xhr.responseText));
-                callback(JSON.parse(xhr.responseText));
-            }
-        };
-        xhr.open('GET', url, true);
-        xhr.send();
+    getAirPollution(coord){
+        const url = `https://api.openweathermap.org/pollution/v1/co/${Math.round(coord.lon)},${Math.round(coord.lat)}/current.json?appid=${APP_ID}`;
+        return this.loadData(url);
     },
 
-    getForecastDetails(city, callback) {
+    getForecastDetails(city) {
         const url = `${FORECAST_DETAILS_ENDPOINT}${city}`;
-        const xhr = new XMLHttpRequest();
-        xhr.onload = function() {
-            if (this.readyState === 4 && this.status === 200){
-                console.log(JSON.parse(xhr.responseText));
-                callback(JSON.parse(xhr.responseText));
-            }
-        };
-        xhr.open('GET', url, true);
-        xhr.send();
+        return this.loadData(url);
     },
 
 /*eslint indent:0*/
