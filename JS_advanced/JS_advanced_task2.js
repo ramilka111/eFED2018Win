@@ -12,11 +12,12 @@ function compare(value1, value2) {
             result = 1;
         }
         setTimeout(() => {
-            resolve(result)
+            resolve(result);
         }, 1000)
     })
+
 }
 
 compare(2, 2).then(res => {
     console.log(res)
-})
+});
