@@ -10,6 +10,7 @@ const page = {
         this.getWeatherDetails(DEFAULT_CITY).then(res => {
             this.render(res);
         });
+
         this.getForecastDetails(DEFAULT_CITY).then(res =>  {
             this.renderForecast(res);
             return res;

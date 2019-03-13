@@ -1,18 +1,18 @@
 window.onload = function() {
     init();
 };
-var rightArrow = document.getElementsByClassName('right-arrow');
-var leftArrow = document.getElementsByClassName('left-arrow');
-var dayBlock = document.getElementsByClassName('day-block');
+let rightArrow = document.getElementsByClassName('right-arrow');
+let leftArrow = document.getElementsByClassName('left-arrow');
+let dayBlock = document.getElementsByClassName('day-block');
 
 
-var curDayName = document.getElementById('current-date');
-var curTemp0 = document.getElementById('current-temp0');
-var curTemp1 = document.getElementById('current-temp1');
-var curTemp2 = document.getElementById('current-temp2');
-var curTemp3 = document.getElementById('current-temp3');
+let curDayName = document.getElementById('current-date');
+let curTemp0 = document.getElementById('current-temp0');
+let curTemp1 = document.getElementById('current-temp1');
+let curTemp2 = document.getElementById('current-temp2');
+let curTemp3 = document.getElementById('current-temp3');
 
-var activeDay = 0;
+let activeDay = 0;
 
 function switchDay(diff) {
     const minValue = 0;
@@ -69,7 +69,7 @@ function init() {
     }
 }
 
-var model = {
+const model = {
     currentDay: 0,
     days: [
         {

@@ -1,10 +1,10 @@
-var model = {
+const model = {
     days: ['Пт','Сб','Вс','Пн','Вт'],
     currentDay: 0
 };
 
 function getDayOfWeek(name, isCurrent){
-    var createNode = document.createElement('div');
+    const createNode = document.createElement('div');
     createNode.style.border = '1px solid black';
     createNode.innerHTML = name;
     if (isCurrent){
@@ -14,26 +14,26 @@ function getDayOfWeek(name, isCurrent){
 }
 
 function renderDays (){
-    var innerTable = window.document.getElementById('inner-table');
+    const innerTable = window.document.getElementById('inner-table');
     while (innerTable.firstChild) {
         innerTable.removeChild(innerTable.firstChild);
     }
     renderCurrentDay();
-    for (var i =0; i<model.days.length; i++){
-        var item = getDayOfWeek(model.days[i], i===model.currentDay);
+    for (let i =0; i<model.days.length; i++){
+        let item = getDayOfWeek(model.days[i],i===model.currentDay);
         innerTable.appendChild(item);
     }
 }
 
 function renderCurrentDay() {
-    var innerTable = window.document.getElementById('inner-table');
-    var createDiv = document.createElement('p');
+    const innerTable = window.document.getElementById('inner-table');
+    const createDiv = document.createElement('p');
     createDiv.innerHTML = 'Текущий: ' + model.days[model.currentDay];
     innerTable.appendChild(createDiv);
 }
 
 window.onload = function() {
-    var rightArrow = document.getElementsByClassName('right-arrow');
+    const rightArrow = document.getElementsByClassName('right-arrow');
     rightArrow[0].addEventListener('click', function () {
         model.currentDay++;
         renderDays();
